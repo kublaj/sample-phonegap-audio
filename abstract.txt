@@ -1,0 +1,10 @@
+The Media sample using PhoneGap* Media Object
+
+The app demonstrates the use of PhoneGap 2.0 Media object with following features: 
+1) detecting if an old audio file already exist
+2) recording
+3) playback
+
+Tested devices: 
+1) Android* Sumsung* Galaxy S2*
+2) Apple* iPad
