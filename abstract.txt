@@ -6,5 +6,5 @@ The app demonstrates the use of PhoneGap 2.0 Media object with following feature
 3) playback
 
 Tested devices: 
-1) Android* Sumsung* Galaxy S2*
-2) Apple* iPad
+1) Android* Sumsung* Galaxy S2* phone
+2) Apple* iPad tablet
