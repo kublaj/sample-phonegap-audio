@@ -104,12 +104,6 @@ function startRecording() {
 
     	recordNow();
     }
-    else if (phoneCheck.windows7) {
-    	my_audio = new Media(mediaRecFile, onMediaCallSuccess, onMediaCallError);
-    	console.log("***test: new Media() for Windows7 ***");
-
-    	recordNow();
-    }
     else if (phoneCheck.ios) {
     	//first create the file
     	checkFileOnly = false;
@@ -146,8 +140,7 @@ function playMusic() {
         	my_audio = new Media("/sdcard/" + mediaRecFile, onMediaCallSuccess, onMediaCallError);
 
             console.log("***test:  Open file:" + mediaRecFile);
-        } else if (phoneCheck.windows7) // windows 7.1 phone
-            my_audio = new Media(mediaRecFile, onMediaCallSuccess, onMediaCallError);
+        } 
         else if (phoneCheck.ios) {
             my_audio = new Media(mediaFileFullName, onMediaCallSuccess, onMediaCallError);
         }
