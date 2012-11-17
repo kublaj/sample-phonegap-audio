@@ -3,13 +3,18 @@ for audio recording and playback.
 
 Application Files
 -----------------
-* index.html
+* abstract.txt
+* app.json
+* config.xml
 * icon.png
+* index.html
+* readme.md
+* screenshot.png
+* css/master.css
 * js/deviceCheck.js
 * js/mediaHandlers.js
-* css/master.css
 
-Copyright (c) 2012, Intel Corporation
+Copyright (c) 2012, Intel Corporation. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, 
 are permitted provided that the following conditions are met:
