@@ -8,7 +8,12 @@
 html,  
 body 
 {
-    background:Azure none repeat scroll 0 0;
+    background:white none repeat scroll 0 0;
+    background-image: -moz-linear-gradient(top, #3399FF 0%, #FFFFFF 50%);
+    background-image: -webkit-linear-gradient(top, #3399FF 0%, #FFFFFF 50%); 
+    background-image: -o-linear-gradient(top, #3399FF 0%, #FFFFFF 50%); 
+    background-image: linear-gradient(top, #3399FF 0%, #FFFFFF 50%);
+    background-image: -ms-linear-gradient(top, #3399FF 0%, #FFFFFF 50%);
     color:black;
     /*background: Azure  ;*/
     height:100%;
@@ -51,6 +56,6 @@ body
 
 .subheader {
    font-weight:bold;
-   background-color: Gray;
+   background-color: #294052;
    color: White;
 }

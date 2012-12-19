@@ -14,53 +14,71 @@
     <title>Using PhoneGap Audio Media</title>
 
 	  <link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8"></link>
-      <script type="text/javascript" src="cordova.js"></script>
-      <script type="text/javascript" src="js/deviceCheck.js"></script>
-      <script type="text/javascript" src="js/mediaHandlers.js"></script>
-      <script type="text/javascript" >
-          document.addEventListener("deviceready", onDeviceReady, false);
+    <!--License files-->
+    <link rel="stylesheet" type="text/css" href="license/license.css" /> 
+    <script src="license/license.js"></script> 
 
-          function onDeviceReady() {
-              document.getElementById("PhonegapVerID").innerHTML += window.device.cordova;
-              console.log("onDeviceReady: " + document.getElementById("PhonegapVerID").innerHTML);
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/deviceCheck.js"></script>
+    <script type="text/javascript" src="js/mediaHandlers.js"></script>
+    <!--JQuery-->
+    <link rel="stylesheet" type="text/css" href="js/jquery/html5sample.min.css" />
+    <link rel="stylesheet" type="text/css" href="js/jquery/jquery.mobile.structure-1.2.0.min.css" /> 
+    <script src="js/jquery/jquery-1.8.0.min.js"></script> 
+    <script type="text/javascript" src="js/jquery/jquery.mobile-1.2.0.min.js"></script> 
+    <script type="text/javascript" >
+        document.addEventListener("deviceready", onDeviceReady, false);
 
-              console.log("*** phoneCheck.android: " + phoneCheck.android);
-              console.log("*** phoneCheck.ios: " + phoneCheck.ios);
+        function onDeviceReady() {
+            document.getElementById("PhonegapVerID").innerHTML += window.device.cordova;
+            console.log("onDeviceReady: " + document.getElementById("PhonegapVerID").innerHTML);
 
-              // set initial button state
-              setButtonState(myMediaState.start);
+            console.log("*** phoneCheck.android: " + phoneCheck.android);
+            console.log("*** phoneCheck.ios: " + phoneCheck.ios);
 
-              // check if an existing media file already exist and reset button state
-              checkMediaRecFileExist();
-          }
+            // set initial button state
+            setButtonState(myMediaState.start);
 
-      </script>
+            // check if an existing media file already exist and reset button state
+            checkMediaRecFileExist();
+        }
+
+    </script>
   </head>
-  <body>
+  <body onload="loadLicenseTxt()">
     <div id="container">
-       <div id="header">Media Sample v1.0</div>
+       <header data-role="header">
+          <h1>Media Sample v1.0</h1>  
+       </header>
+       
+       <div id="licensebtnl" onclick="onclickLicenseBtn()"> i </div>
+
        <div id="body">
            <div class="subheader" id="PhonegapVerID">Record with PhoneGap version: </div><br />
            <div style="padding-left:15pt">
-               <button class="button_round" ID="startRecID" onclick="startRecording()">Record</button>
-               <button class="button_round" ID="stopRecID" onclick="stopRecording()">Stop</button>
-
+               <button ID="startRecID" data-theme="a" data-inline="true" onclick="startRecording()">Record</button>
+                <button ID="stopRecID" data-theme="a" data-inline="true" onclick="stopRecording()">Stop</button>
                <div id="RecStatusID">Status: </div>
                <div id="media_rec_pos">Audio position: 0 sec</div>
            </div><br />
            <div class="subheader" id="PhonegapVerID">Playback Using PhoneGap</div><br />
            <div style="padding-left:15pt">
-               <button class="button_round" ID="startPlayID" onclick="playMusic()">Play</button>
-               <button class="button_round" ID="pausePlayID" onclick="pauseMusic()">Pause</button>
-               <button class="button_round" ID="stopPlayID" onclick="stopMusic()">Stop</button>
+               <button ID="startPlayID" data-theme="a" data-inline="true" onclick="playMusic()">Play</button>
+               <button ID="pausePlayID" data-theme="a" data-role="button" data-inline="true" onclick="pauseMusic()">Pause</button>
+               <button ID="stopPlayID" data-theme="a" data-role="button" data-inline="true" onclick="stopMusic()">Stop</button>
 
                <div id="PlayStatusID">Status: </div>
                <div id="media_pos">Audio position: 0 sec</div>
-           </div>
-
-       </div>
-       <div id="footer"></div>
+           </div>           
+       </div>     
+        <footer data-role="header">
+          <h1></h1>  
+       </footer>
     </div>
+    <div id="licensepage" style="display: none">
+       <div id="licensetext"></div>
+       <div id="licensebtnq" class="licensebtn" onclick="onclickLicBack()">Back</div>
+    </div>      
 
   </body>
 </html>

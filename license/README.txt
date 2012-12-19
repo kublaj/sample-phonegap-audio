@@ -1,4 +1,4 @@
-This sample application demonstrates the use of the PhoneGap media object APIs 
+﻿This sample application demonstrates the use of the PhoneGap media object APIs 
 for audio recording and playback. 
 
 Application Files
